@@ -9,7 +9,8 @@
   "features": {
     "./features/zsh": {},
     "./features/neovim": {},
-    "./features/latex": {}
+    "./features/latex": {},
+    "./features/python": {}
   },
   "customizations": {
     "vscode": {
