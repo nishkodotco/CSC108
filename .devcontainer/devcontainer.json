@@ -5,7 +5,7 @@
     "dockerfile": "./dockerfile"
   },
   "remoteUser": "nishko",
-  "workspaceFolder": "/workspaces/lab",
+  "workspaceFolder": "/workspaces/CSC108",
   "features": {
     "./features/zsh": {},
     "./features/neovim": {},
@@ -15,16 +15,9 @@
     "vscode": {
       "settings": {},
       "extensions": [
-        "vira.vsc-vira-theme",
-        "redhat.vscode-yaml",
         "gruntfuggly.todo-tree",
-        // Project Specific Application
-        "angular.ng-template",
-        "ms-azuretools.ms-entra",
-        "EditorConfig.EditorConfig",
-        "james-yu.latex-workshop"
       ]
     }
   },
-  "postCreateCommand": "sudo chown -R $(id -u):$(id -g) /workspaces/lab"
+  "postCreateCommand": "sudo chown -R $(id -u):$(id -g) /workspaces/CSC108"
 }
