@@ -16,7 +16,7 @@
     "vscode": {
       "settings": {},
       "extensions": [
-        "gruntfuggly.todo-tree",
+        "gruntfuggly.todo-tree"
       ]
     }
   },
