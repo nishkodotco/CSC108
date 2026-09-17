@@ -5,7 +5,7 @@ set -euxo pipefail
 microdnf update -y
 
 microdnf install -y \
-    python3 \
+    python3.14 \
     python3-pip
 
 microdnf clean all
