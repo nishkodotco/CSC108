@@ -10,7 +10,7 @@ def percentage(raw_mark: float, max_mark: float) -> float:
     75.0
     NOTE: Please add extra examples!
     '''
-    pass
+    return (raw_mark / max_mark) * 100
 
 def contribution(mark_as_percent: float, weight: float) -> float:
     '''Given a piece of work that earned mark_as_percent percent and was
@@ -29,9 +29,9 @@ def raw_contribution(raw_mark: float, max_mark: float, weight: float) -> float:
     >>> raw_contribution(13.5, 15.0, 10.0)
     9.0
     '''
-    pass
+    return percentage(raw_mark , max_mark) * (weight / 100)
 
-def assignments_contribution(a1, a2, a3):
+def assignments_contribution(a1:float, a2:float, a3:float) -> int:
     '''NOTE: The type annotations are missing! Please add them.
     Given raw marks a1, a2 and a3 for the three course assignments,
     calculate the contribution to the final course grade.
@@ -41,7 +41,7 @@ def assignments_contribution(a1, a2, a3):
     >>> assignments_contribution(30.0, 32.0, 20.0)
     13
     '''
-    pass
+    return int(raw_contribution(30.0, 50, 5) + raw_contribution(32.0, 50, 12.5) + raw_contribution(20.0, 50, 5))
 
 def prep_review_practice_contribution(prep_review: float, practice: float) -> int:
     '''Given raw marks for prep and review (Sunday and Friday PCRS assignments)
@@ -54,3 +54,28 @@ def prep_review_practice_contribution(prep_review: float, practice: float) -> in
     >>> prep_review_practice_contribution(18.0, 8.0)
     15
     '''
+    return int(raw_contribution(prep_review, 27, 7.5) + raw_contribution(practice, 8, 10))
+
+def term_work_mark(assignments: float, prep_review: float, practice: float, midterm: float) -> float:
+    '''Given the contribution of:
+    assignments (out of 22.5)
+    prepare and review (out of 7.5)
+    practice (out of 10)
+    and midterm (as a percentage),
+    return the term mark grade.
+    NOTE: the midterm is worth 30%, so the returned mark represents a mark out of 70.
+    >>> term_work_mark(16.0, 8.0, 5.0, 80.0)
+    53.0
+    '''
+    return assignments + prep_review + practice + contribution(midterm, 30)
+
+def exam_required(term_work: float, desired_grade: int) -> float:
+    '''Given a term work mark of term_work representing 70% of the points in the
+    grading scheme, calculate and return the percentage required on the exam for
+    the final mark to be desired_grade.
+    >>> exam_required(46.0, 82)
+    120.0
+    '''
+
+
+    return (( desired_grade - term_work ) / 30 ) * 100

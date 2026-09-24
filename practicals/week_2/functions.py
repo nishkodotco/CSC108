@@ -17,7 +17,7 @@ def is_multiple_of_7(x: int) -> bool:
     >>> is_multiple_of_7(7)
     True
     '''
-    pass
+    return is_multiple(x,7)
 
 def is_multiple(x: int, y: int) -> bool:
     '''Return True iff y divides x without a remainder.
@@ -26,4 +26,4 @@ def is_multiple(x: int, y: int) -> bool:
     >>> is_multiple(7, 2)
     False
     '''
-    pass
+    return x % y == 0
