@@ -64,6 +64,6 @@ QUESTION 2
     - (g) - 'see'
     - (h) - 'is' - because it moves backword till the end, since there is no stop sign
     - (i) - 'i' - because it will move backword and will include the first character and then string will be empty.
-    - (j) - 'silenceryo'
-    - (k) - 'enc'
+    - (j) - 'silencery'
+    - (k) - 'en'
 """
